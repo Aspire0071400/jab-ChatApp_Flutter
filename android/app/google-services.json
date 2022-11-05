@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "88151125156",
+    "project_id": "jabchatappflutter",
+    "storage_bucket": "jabchatappflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88151125156:android:e294ecbdfa10fd3a4aca31",
+        "android_client_info": {
+          "package_name": "com.example.jab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88151125156-dki5ie9gumq3iajnvpmbpqnrdk36mism.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jab",
+            "certificate_hash": "479a7741dcbd320130880a7f1389c0d5143bed2e"
+          }
+        },
+        {
+          "client_id": "88151125156-fmdu9itp8v5ada6hhoqmf15loodilhq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIpPHWcQ9FequpzjIv0ln1cTwvxKzdjhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88151125156-fmdu9itp8v5ada6hhoqmf15loodilhq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

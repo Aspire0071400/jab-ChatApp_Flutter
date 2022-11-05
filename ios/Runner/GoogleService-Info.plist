@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>88151125156-4smbnledv40n6aqqqhag0m686er2kont.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.88151125156-4smbnledv40n6aqqqhag0m686er2kont</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>88151125156-dki5ie9gumq3iajnvpmbpqnrdk36mism.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB68PhOKizhiujP8t5OqpkRFdlHo-ADJ1E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>88151125156</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.jab</string>
+	<key>PROJECT_ID</key>
+	<string>jabchatappflutter</string>
+	<key>STORAGE_BUCKET</key>
+	<string>jabchatappflutter.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:88151125156:ios:89765c6e85ed1cfe4aca31</string>
+</dict>
+</plist>
