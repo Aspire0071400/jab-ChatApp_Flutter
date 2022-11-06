@@ -1,3 +1,6 @@
 adding firebase to android
 '' to IOS
 '' to Web
+firebase.initializeApp() //Android ,ios
+for web ^ firebase.initializeApp(options: )//opt= api_key,messeging_sender_id.
+using option parameter is only valid for web.
