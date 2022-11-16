@@ -1,21 +1,20 @@
-import 'dart:ffi';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:jab/pages/auth/register_page.dart';
+import 'package:jab/pages/auth/login_page.dart';
 import 'package:jab/widgets/widgets.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final formKey = GlobalKey<FormState>();
   String email = "";
   String password = "";
+  String fullName = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,10 +35,35 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
-                const Text("Login now to see what your freinds texted",
+                const Text("Create your account now to chat with your friends",
                     style:
                         TextStyle(fontSize: 15, fontWeight: FontWeight.w400)),
-                Image.asset("assets/login.png"),
+                Image.asset("assets/register.png"),
+                TextFormField(
+                  decoration: TextInputDecoration.copyWith(
+                    labelText: "Full Name",
+                    prefixIcon: Icon(
+                      Icons.person,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                  onChanged: (val) {
+                    setState(() {
+                      fullName = val;
+                      print(email);
+                    });
+                  },
+                  validator: (val) {
+                    if (val!.isNotEmpty) {
+                      return null;
+                    } else {
+                      return "Name can't be empty";
+                    }
+                  },
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
                 TextFormField(
                   decoration: TextInputDecoration.copyWith(
                     labelText: "Email",
@@ -99,11 +123,11 @@ class _LoginPageState extends State<LoginPage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30))),
                     child: const Text(
-                      "Sign In",
+                      "Register",
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                     onPressed: () {
-                      login();
+                      Register();
                     },
                   ),
                 ),
@@ -111,17 +135,17 @@ class _LoginPageState extends State<LoginPage> {
                   height: 10,
                 ),
                 Text.rich(TextSpan(
-                  text: "Don't have an Account? ",
+                  text: " Already have an Account? ",
                   style: const TextStyle(color: Colors.black, fontSize: 14),
                   children: <TextSpan>[
                     TextSpan(
-                        text: "Register here",
+                        text: "Login Now",
                         style: const TextStyle(
                             color: Colors.black,
                             decoration: TextDecoration.underline),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            nextScreen(context, const RegisterPage());
+                            nextScreen(context, const LoginPage());
                           }),
                   ],
                 )),
@@ -133,5 +157,5 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  login() {}
+  Register() {}
 }
