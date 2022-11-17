@@ -1,5 +1,3 @@
-import 'dart:js_util';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DatabaseService {
@@ -13,7 +11,7 @@ class DatabaseService {
   final CollectionReference groupCollection =
       FirebaseFirestore.instance.collection("groups");
 
-  //updateing the user data
+  //saving the user data
   Future updateUserData(String fullName, String email) async {
     return await userCollection.doc(uid).set({
       "fullName": fullName,
