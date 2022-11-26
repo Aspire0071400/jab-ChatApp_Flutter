@@ -5,5 +5,5 @@ class Constants {
   static String apiKey = "AIzaSyBVPcXXAcdidju5BWEiyQk6WISWAdY0IOc";
   static String messagingSenderId = "88151125156";
   static String projectId = "jabchatappflutter";
-  final primaryColor = Color(0xFF9575CD);
+  final primaryColor = const Color(0xFF9575CD);
 }
