@@ -1,17 +1,15 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import 'package:jab/helper/helper_function.dart';
 import 'package:jab/pages/auth/login_page.dart';
 import 'package:jab/pages/home_page.dart';
 import 'package:jab/shared/constants.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 void main() async {
-  WidgetsFlutterBinding
-      .ensureInitialized(); //to ensure the initialisation of all widgets present.
+  WidgetsFlutterBinding.ensureInitialized();
 
   if (kIsWeb) {
-    //run initialisation for web only.
     await Firebase.initializeApp(
         options: FirebaseOptions(
             apiKey: Constants.apiKey,
@@ -19,11 +17,9 @@ void main() async {
             messagingSenderId: Constants.messagingSenderId,
             projectId: Constants.projectId));
   } else {
-    //run initialisation for android and ios.
     await Firebase.initializeApp();
   }
 
-  // to initializ firebase for android and ios.
   runApp(const MyApp());
 }
 
@@ -36,6 +32,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool _isSignedIn = false;
+
   @override
   void initState() {
     super.initState();
@@ -43,7 +40,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   getUserLoggedInStatus() async {
-    await HelperFunction.getUserLoggedInStatus().then((value) {
+    await HelperFunctions.getUserLoggedInStatus().then((value) {
       if (value != null) {
         setState(() {
           _isSignedIn = value;

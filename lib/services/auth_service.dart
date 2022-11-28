@@ -1,11 +1,11 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:jab/helper/helper_function.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:jab/services/database_service.dart';
 
 class AuthService {
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 
-  //login
+  // login
   Future loginWithUserNameandPassword(String email, String password) async {
     try {
       User user = (await firebaseAuth.signInWithEmailAndPassword(
@@ -16,12 +16,11 @@ class AuthService {
         return true;
       }
     } on FirebaseAuthException catch (e) {
-      //print(e);
       return e.message;
     }
   }
 
-  //register
+  // register
   Future registerUserWithEmailandPassword(
       String fullName, String email, String password) async {
     try {
@@ -30,22 +29,21 @@ class AuthService {
           .user!;
 
       if (user != null) {
-        //call db service to update the user data
+        // call our database service to update the user data.
         await DatabaseService(uid: user.uid).savingUserData(fullName, email);
         return true;
       }
     } on FirebaseAuthException catch (e) {
-      //print(e);
       return e.message;
     }
   }
 
-  //signout
+  // signout
   Future signOut() async {
     try {
-      await HelperFunction.saveUserLoggedInStatus(false);
-      await HelperFunction.saveUserEmailSF("");
-      await HelperFunction.saveUserNameSF("");
+      await HelperFunctions.saveUserLoggedInStatus(false);
+      await HelperFunctions.saveUserEmailSF("");
+      await HelperFunctions.saveUserNameSF("");
       await firebaseAuth.signOut();
     } catch (e) {
       return null;
