@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          "JABBER",
+                          "JAB-CHAT",
                           style: TextStyle(
                               fontSize: 40, fontWeight: FontWeight.bold),
                         ),

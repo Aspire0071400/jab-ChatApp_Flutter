@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
         title: const Text(
-          "Groups",
+          "Communities",
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 27),
         ),
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             leading: const Icon(Icons.group),
             title: const Text(
-              "Groups",
+              "Communities",
               style: TextStyle(color: Colors.black),
             ),
           ),
@@ -204,7 +204,7 @@ class _HomePageState extends State<HomePage> {
           return StatefulBuilder(builder: ((context, setState) {
             return AlertDialog(
               title: const Text(
-                "Create a group",
+                "Create a Community",
                 textAlign: TextAlign.left,
               ),
               content: Column(
@@ -261,8 +261,8 @@ class _HomePageState extends State<HomePage> {
                         _isLoading = false;
                       });
                       Navigator.of(context).pop();
-                      showSnackbar(
-                          context, Colors.green, "Group created successfully.");
+                      showSnackbar(context, Colors.green,
+                          "Community created successfully.");
                     }
                   },
                   style: ElevatedButton.styleFrom(

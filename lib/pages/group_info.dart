@@ -52,7 +52,7 @@ class _GroupInfoState extends State<GroupInfo> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: Theme.of(context).primaryColor,
-        title: const Text("Group Info"),
+        title: const Text("Community Info"),
         actions: [
           IconButton(
               onPressed: () {
@@ -63,7 +63,7 @@ class _GroupInfoState extends State<GroupInfo> {
                       return AlertDialog(
                         title: const Text("Exit"),
                         content:
-                            const Text("Are you sure you exit the group? "),
+                            const Text("Are you sure you exit the Community? "),
                         actions: [
                           IconButton(
                             onPressed: () {
@@ -127,7 +127,7 @@ class _GroupInfoState extends State<GroupInfo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Group: ${widget.groupName}",
+                        "Community: ${widget.groupName}",
                         style: const TextStyle(fontWeight: FontWeight.w500),
                       ),
                       const SizedBox(

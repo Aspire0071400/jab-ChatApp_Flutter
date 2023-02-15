@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          "JABBER",
+                          "JAB-CHAT",
                           style: TextStyle(
                               fontSize: 45, fontWeight: FontWeight.bold),
                         ),

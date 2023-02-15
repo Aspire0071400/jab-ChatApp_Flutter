@@ -59,7 +59,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             leading: const Icon(Icons.group),
             title: const Text(
-              "Groups",
+              "Communities",
               style: TextStyle(color: Colors.black),
             ),
           ),
